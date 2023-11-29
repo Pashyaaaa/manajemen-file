@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Managament</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">Managament File</div>
+            <div class="card-body">
+              <form
+                action="http://localhost:5000/files"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="form-group mb-3">
+                  <label for="fileInput">Pilih File:</label>
+                  <input
+                    type="file"
+                    class="form-control-file input-file"
+                    id="fileInput"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="urutan">Urutan:</label>
+                  <input
+                    type="number"
+                    class="form-control urutan"
+                    id="urutan"
+                    name="urutan"
+                    placeholder="Masukkan Urutan"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary input-submit">
+                  Simpan
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <!-- <span class="feedback-message"></span> -->
+          <table class="table table-striped">
+            <thead>
+              <tr class="text-center">
+                <th scope="col">Urutan</th>
+                <th scope="col">Nama File</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="table-body" class="text-center"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
