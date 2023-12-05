@@ -5,6 +5,6 @@
 2. npm install
 3. npm run start
 
-buka index.html menggunakan liveserver / open in browser
+buka index.html yang ada di folder client menggunakan liveserver / open in browser
  
      
