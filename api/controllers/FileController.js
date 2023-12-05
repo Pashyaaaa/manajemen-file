@@ -133,11 +133,14 @@ export const updateToken = async (req, res) => {
 
   try {
     const { token } = req.body;
-    const sql = "INSERT INTO token(token) VALUES (?)";
+    const sql = "UPDATE token SET token = ? WHERE id = 1";
+
     db.run(sql, [token], (err) => {
       if (err) throw err;
-      console.log(`Berhasil memasukkan token: ${token}`);
-      res.status(200).json({ success: true });
+
+      res
+        .status(200)
+        .json({ success: true, message: `Berhasil, token: ${token}` });
     });
   } catch (err) {
     console.log(err);

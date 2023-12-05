@@ -16,6 +16,6 @@ router.get("/download/:hashedFilename", downloadFile);
 router.post("/files", addFile);
 router.put("/files/:id", editUrutan);
 router.delete("/files/:id", deleteFile);
-router.post("/update_token", updateToken);
+router.patch("/update_token", updateToken);
 
 export default router;
